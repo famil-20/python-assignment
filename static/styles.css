@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.todo-form {
+    margin-bottom: 20px;
+}
+
+.todo-form input {
+    margin-right: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+.todo-form button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.todos {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todos li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.todos li.done {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todos li span {
+    margin-right: 10px;
+}
+
+.todos li a {
+    color: #4CAF50;
+    text-decoration: none;
+}

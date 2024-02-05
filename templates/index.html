@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fancy Todo List</h1>
+        <form action="/add" method="post" class="todo-form">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="description" placeholder="Description">
+            <button type="submit">Add Task</button>
+        </form>
+        <ul class="todos">
+            {% for todo in todos %}
+                <li class="{% if todo.done %}done{% endif %}">
+                    <span>{{ todo.title }}</span>
+                    <span>{{ todo.description }}</span>
+                    <a href="{{ url_for('toggle_done', id=todo.id) }}">
+                        {% if todo.done %}Undo{% else %}Done{% endif %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
