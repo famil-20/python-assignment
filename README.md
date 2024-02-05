@@ -1,5 +1,18 @@
 # Simple TODO list web application
 
+## Get Started
+
+Run following commands:
+
+- Clean first (just in case to make sure we have fresh env): `make clean`
+
+- Setup to install required dependencies: `make setup`
+
+- Run to start the server and open : `make run`
+
+- Open http://localhost:5000/ to see the web application
+
+
 ## Things done 
 - Simple todo list with toggle and delete functionality
 - Login/signup/logout feature
