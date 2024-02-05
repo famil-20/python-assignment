@@ -32,6 +32,13 @@ def toggle_done(id):
     db.session.commit()
     return redirect(url_for('index'))
 
+@app.route('/delete/<int:id>')
+def delete_todo(id):
+    todo_to_delete = Todo.query.get(id)
+    db.session.delete(todo_to_delete)
+    db.session.commit()
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

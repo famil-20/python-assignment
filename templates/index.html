@@ -22,6 +22,7 @@
                     <a href="{{ url_for('toggle_done', id=todo.id) }}">
                         {% if todo.done %}Undo{% else %}Done{% endif %}
                     </a>
+                    <a href="{{ url_for('delete_todo', id=todo.id) }}" class="delete-btn">Delete</a>
                 </li>
             {% endfor %}
         </ul>

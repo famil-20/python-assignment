@@ -55,3 +55,8 @@ h1 {
     color: #4CAF50;
     text-decoration: none;
 }
+
+.delete-btn {
+    margin-left: 10px;
+    color: #f44336;
+}
