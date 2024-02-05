@@ -41,8 +41,12 @@ def signup():
             new_user = User(username=username, password=password)
             db.session.add(new_user)
             db.session.commit()
-            flash('Account created successfully! Please log in.', 'success')
-            return redirect(url_for('login'))
+            
+            # Automatically log in the user after signing up
+            login_user(new_user)
+            
+            flash('Account created successfully! You are now logged in.', 'success')
+            return redirect(url_for('todos'))
     return render_template('signup.html')
 
 @app.route('/login', methods=['GET', 'POST'])
