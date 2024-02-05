@@ -42,7 +42,7 @@ h1 {
     padding: 10px 0;
 }
 
-.todos li.done {
+span.done {
     text-decoration: line-through;
     color: #aaa;
 }
@@ -51,7 +51,7 @@ h1 {
     margin-right: 10px;
 }
 
-.todos li a {
+.done-btn {
     color: #4CAF50;
     text-decoration: none;
 }
